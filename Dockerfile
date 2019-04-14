@@ -3,6 +3,7 @@ FROM ubuntu:latest
 RUN DEBIAN_FRONTEND=noninteractive \
  && apt-get update \
  && apt-get upgrade --yes \
+ && echo debconf debconf/frontend select Noninteractive | debconf-set-selections \
  && echo tzdata tzdata/Areas select Europe | debconf-set-selections \
  && echo tzdata tzdata/Zones/Europe select Berlin | debconf-set-selections \
  && apt-get install --yes --no-install-recommends \
