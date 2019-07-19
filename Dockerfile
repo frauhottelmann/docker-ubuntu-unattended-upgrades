@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM arm64v8/ubuntu:latest
 
 RUN DEBIAN_FRONTEND=noninteractive \
  && apt-get update \
