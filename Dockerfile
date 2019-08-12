@@ -1,4 +1,4 @@
-FROM arm64v8/ubuntu:latest
+FROM arm64v8/ubuntu:18.04
 
 RUN DEBIAN_FRONTEND=noninteractive \
  && apt-get update \
